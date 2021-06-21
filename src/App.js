@@ -9,18 +9,11 @@ import {
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Stream = [
-  { id: "Netflix" },
-  { id: "HBO" },
-  { id: "Hulu" },
-  { id: "Prime" },
-];
-
 export default function App() {
   //Insert router, links here
   return (
     <Router>
-      <div>
+      <div className="container my-5">
         <Link to="/netflix">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg"
@@ -56,10 +49,9 @@ export default function App() {
 function Child() {
   // Below this comment, there's one major key script missing
   const { id } = useParams();
-  const stream = Stream[id];
   return (
-    <div>
-      <h3>
+    <div className="container m-4 py-2">
+      <h3 className="column">
         You Selected:<span>{id}</span>
       </h3>
     </div>
